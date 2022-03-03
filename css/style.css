@@ -1,7 +1,7 @@
 /* ------------color palette---------- */
 :root {
-    --color-primary: #102d55;
-    --color-body: black;
+    --color-primary: #113563;
+    --color-body: rgb(37, 37, 37);
 }
 
 /* ----------- TYPOGRAPHY -------- */
@@ -9,18 +9,38 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    color: var(--color-body);
+    font-size: 1.2rem;
+}
+
 h1,
 h2 {
     color: var(--color-primary);
+    margin-top: 0;
 }
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
 
 h3 {
     color: var(--color-body);
+    margin-top: 0;
+    font-size: 1.5rem;
 }
 
-body {
-    color: var(--color-body);
+p {
+    margin-top: 0;
+    line-height: 1.8;
 }
+
+
 
 /* --------- LAYOUT --------- */
 body {
@@ -28,20 +48,124 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: .2fr 1fr;
     border-radius: 10px;
     border: 2px solid #ccc;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
     overflow: hidden;
-    height: 50vh;
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
 }
 
 main {
     height: 100%;
     background: #fff;
+    padding: 3rem 4rem;
+    padding-left: 1rem;
 }
 
 aside {
     height: 100%;
     background: var(--color-primary);
+}
+
+/* ------- icons ----------- */
+.icon {
+    color: #fff;
+}
+
+.icon--social {
+    font-size: 1.2rem;
+}
+
+.icon--normal {
+    font-size: 2rem;
+}
+
+.icon__container {
+    background: var(--color-primary);
+    border-radius: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.icon__container--social {
+    height: 2rem;
+    padding: .3rem;
+    width: 2rem;
+}
+
+.icon__container--normal {
+    height: 3rem;
+    padding: .5rem;
+    width: 3rem;
+}
+
+/* --------- section --------- */
+.section__header {
+    display: flex;
+    align-items: center;
+}
+
+.section__heading {
+    margin-top: 1.25rem;
+    margin-left: 1rem;
+}
+
+
+/* ------ personal-info section */
+.name {
+    margin-bottom: .5rem;
+}
+
+.career {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.socials {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 35rem 35rem;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.social__icon {
+    height: 2rem;
+    padding: .3rem;
+    width: 2rem;
+}
+
+
+.social__detail {
+    margin-left: .5rem;
+}
+
+
+/* -------- Experience section ---------*/
+.experience__list {
+    padding-left: 2.5rem;
+}
+
+.experience__item {
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.job-title {
+    margin-bottom: .5rem;
+
+}
+
+.company {
+    display: block;
+    margin-bottom: .8rem;
+    font-style: italic;
+}
+
+.job-responsibility {
+    padding-left: 1.3rem;
 }
