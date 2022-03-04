@@ -1,6 +1,7 @@
 /* ------------color palette---------- */
 :root {
-    --color-primary: #113563;
+    --color-primary: #163c70;
+    --color-hover: rgb(41, 144, 241);
     --color-body: rgb(37, 37, 37);
 }
 
@@ -11,7 +12,8 @@ html {
 
 body {
     color: var(--color-body);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
 }
 
 h1,
@@ -40,34 +42,9 @@ p {
     line-height: 1.8;
 }
 
-
-
-/* --------- LAYOUT --------- */
-body {
-    padding: 3rem 2rem;
-}
-
-.container {
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    overflow: hidden;
-    max-width: 1140px;
-    margin: 0 auto;
-    margin-bottom: 5rem;
-}
-
-main {
-    height: 100%;
-    background: #fff;
-    padding: 3rem 4rem;
-    padding-left: 1rem;
-}
-
-aside {
-    height: 100%;
-    background: var(--color-primary);
+a {
+    text-decoration: none;
+    color: var(--color-body);
 }
 
 /* ------- icons ----------- */
@@ -76,23 +53,28 @@ aside {
 }
 
 .icon--social {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .icon--normal {
     font-size: 2rem;
 }
 
+.icon--social {
+    font-size: .8rem;
+}
+
 .icon__container {
     background: var(--color-primary);
-    border-radius: 100%;
+    border-radius: 50%;
     display: inline-block;
     text-align: center;
+    line-height: 1;
 }
 
 .icon__container--social {
     height: 2rem;
-    padding: .3rem;
+    padding: 0;
     width: 2rem;
 }
 
@@ -102,21 +84,41 @@ aside {
     width: 3rem;
 }
 
-/* --------- section --------- */
-.section__header {
-    display: flex;
-    align-items: center;
+.icon__container--timeline {
+    height: 1rem;
+    padding: .3rem;
+    width: 1rem;
 }
 
-.section__heading {
-    margin-top: 1.25rem;
-    margin-left: 1rem;
+/* ----------- LAYOUT --------------- */
+main {
+    margin: 3rem 2rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
 }
-
 
 /* ------ personal-info section */
+.section--info {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+.section--info .navbar {
+    background-color: var(--color-primary);
+}
+
+.personal-info {
+    padding-left: 1rem;
+}
+
 .name {
     margin-bottom: .5rem;
+    transition: color .2s;
+}
+
+.name:hover {
+    color: var(--color-hover);
 }
 
 .career {
@@ -144,28 +146,121 @@ aside {
     margin-left: .5rem;
 }
 
-
-/* -------- Experience section ---------*/
-.experience__list {
-    padding-left: 2.5rem;
+.personal-description {
+    padding-right: 10rem;
 }
 
-.experience__item {
-    padding-left: 1.5rem;
-    padding-bottom: 2rem;
+/* -------- timeline section ---------- */
+.timeline {
+    display: grid;
+    grid-template-columns: 150px 50px 1fr;
+}
+
+.timeline__middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline__line {
+    width: 3px;
+    height: 100%;
+    background: #ccc;
+    margin: auto;
+    display: inline-block;
+}
+
+.timeline__detail--inline {
+    margin-bottom: 1.5rem;
+}
+
+.timeline__icon {
+    justify-self: center;
+}
+
+.timeline__icon--header {
+    margin-top: 0;
+}
+
+.timeline__date {
+    grid-column-start: 1;
+    background-color: var(--color-primary);
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: end;
+    align-self: start;
+    color: white;
+    padding-right: 1rem;
+    margin-top: -1rem;
+}
+
+.timeline__date.last {
+    padding-bottom: 7rem;
+}
+
+.timeline__heading {
+    margin-bottom: 1.5rem;
+}
+
+.timeline__detail {
+    transform: translateY(-0.5rem);
 }
 
 .job-title {
-    margin-bottom: .5rem;
-
-}
-
-.company {
-    display: block;
-    margin-bottom: .8rem;
-    font-style: italic;
+    margin-bottom: 0;
 }
 
 .job-responsibility {
-    padding-left: 1.3rem;
+    padding-left: 1.2rem;
+}
+
+.company {
+    font-style: italic;
+}
+
+.software__detail {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+}
+
+.software__expertise {
+    display: flex;
+    flex-direction: column;
+    margin-top: .3rem;
+}
+
+.software__level {
+    display: flex;
+}
+
+.software__level-name {
+    margin-top: .5rem;
+    text-align: end;
+}
+
+.software__circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: .3rem;
+}
+
+.software__circle.active {
+    background-color: var(--color-primary);
+}
+
+
+/* ----------- skills section --------------- */
+
+.timeline__detail--inline {
+    display: flex;
+}
+
+.skill__name {
+    font-weight: bold;
+    padding-right: 1rem;
 }
