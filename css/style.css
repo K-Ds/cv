@@ -286,3 +286,10 @@ main {
     font-weight: bold;
     padding-right: 1rem;
 }
+
+.bar {
+    padding-right: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+    transform: translateY(-.5rem);
+}
