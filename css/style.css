@@ -14,6 +14,8 @@ body {
     color: var(--color-body);
     font-size: 1.5rem;
     line-height: 1.5;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 h1,
@@ -52,16 +54,13 @@ a {
     color: #fff;
 }
 
-.icon--social {
-    font-size: 1.5rem;
-}
-
 .icon--normal {
     font-size: 2rem;
 }
 
 .icon--social {
-    font-size: .8rem;
+    font-size: 1.3rem;
+    vertical-align: middle;
 }
 
 .icon__container {
@@ -88,6 +87,16 @@ a {
     height: 1rem;
     padding: .3rem;
     width: 1rem;
+}
+
+.icon--puzzle-piece {
+    transform: rotate(45deg);
+    padding-left: .3rem;
+}
+
+.icon--tv {
+    font-size: 1.5rem;
+    padding-top: .3rem
 }
 
 /* ----------- LAYOUT --------------- */
