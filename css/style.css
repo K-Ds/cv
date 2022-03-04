@@ -105,6 +105,19 @@ main {
     border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
+    border-left: none;
+}
+
+.footer {
+    margin: 0;
+    height: 25px;
+    display: grid;
+    grid-template-columns: 150.5px 1fr;
+    transform: scaleY(2);
+}
+
+.footer__left {
+    background: var(--color-primary);
 }
 
 /* ------ personal-info section */
