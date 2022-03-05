@@ -62,6 +62,7 @@ a {
 .icon--social {
     font-size: 1.3rem;
     vertical-align: middle;
+    margin-top:0.3rem;
 }
 
 .icon__container {
